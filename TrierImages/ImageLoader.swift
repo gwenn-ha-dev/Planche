@@ -1,5 +1,6 @@
 import SwiftUI
 import AppKit
+import ImageIO
 
 class ThumbnailCache {
     static let shared = ThumbnailCache()
@@ -9,7 +10,7 @@ class ThumbnailCache {
 
     init() {
         cache.countLimit = 2000
-        cache.totalCostLimit = 512 * 1024 * 1024 // 512 MB
+        cache.totalCostLimit = 512 * 1024 * 1024
     }
 
     func thumbnail(for url: URL, size: CGFloat, completion: @escaping (NSImage?) -> Void) {
@@ -21,48 +22,20 @@ class ThumbnailCache {
         }
 
         queue.async { [weak self] in
-            guard let image = NSImage(contentsOf: url) else {
+            let options: [CFString: Any] = [
+                kCGImageSourceThumbnailMaxPixelSize: size,
+                kCGImageSourceCreateThumbnailFromImageAlways: true,
+                kCGImageSourceCreateThumbnailWithTransform: true,
+            ]
+
+            guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
+                  let cgImage = CGImageSourceCreateThumbnailAtIndex(source, 0, options as CFDictionary) else {
                 DispatchQueue.main.async { completion(nil) }
                 return
             }
 
-            let originalSize = image.size
-            guard originalSize.width > 0 && originalSize.height > 0 else {
-                DispatchQueue.main.async { completion(nil) }
-                return
-            }
-
-            let scale = min(size / originalSize.width, size / originalSize.height, 1.0)
-            let newSize = NSSize(
-                width: round(originalSize.width * scale),
-                height: round(originalSize.height * scale)
-            )
-
-            let bitmapRep = NSBitmapImageRep(
-                bitmapDataPlanes: nil,
-                pixelsWide: Int(newSize.width),
-                pixelsHigh: Int(newSize.height),
-                bitsPerSample: 8,
-                samplesPerPixel: 4,
-                hasAlpha: true,
-                isPlanar: false,
-                colorSpaceName: .deviceRGB,
-                bytesPerRow: 0,
-                bitsPerPixel: 0
-            )!
-            let context = NSGraphicsContext(bitmapImageRep: bitmapRep)!
-            NSGraphicsContext.saveGraphicsState()
-            NSGraphicsContext.current = context
-            image.draw(in: NSRect(origin: .zero, size: newSize),
-                       from: NSRect(origin: .zero, size: originalSize),
-                       operation: .copy,
-                       fraction: 1.0)
-            NSGraphicsContext.restoreGraphicsState()
-
-            let thumb = NSImage(size: newSize)
-            thumb.addRepresentation(bitmapRep)
-
-            let cost = Int(newSize.width * newSize.height * 4)
+            let thumb = NSImage(cgImage: cgImage, size: NSSize(width: cgImage.width, height: cgImage.height))
+            let cost = cgImage.width * cgImage.height * 4
             self?.cache.setObject(thumb, forKey: key, cost: cost)
 
             DispatchQueue.main.async { completion(thumb) }
