@@ -66,8 +66,10 @@ class ImageStore: ObservableObject {
             options: [.skipsHiddenFiles, .skipsPackageDescendants]
         ) else { return [] }
 
+        let allURLs = enumerator.allObjects.compactMap { $0 as? URL }
+
         var items: [ImageItem] = []
-        for case let fileURL as URL in enumerator {
+        for fileURL in allURLs {
             if Self.supportedExtensions.contains(fileURL.pathExtension.lowercased()) {
                 items.append(ImageItem(url: fileURL))
                 if items.count.isMultiple(of: 100) {
