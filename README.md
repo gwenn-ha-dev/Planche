@@ -40,7 +40,7 @@ Télécharger le `.dmg` depuis la page [Releases](../../releases) et glisser l'a
 ### Compilation depuis les sources
 
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/tlebris/TrierImages.git
 cd TrierImages
 open TrierImages.xcodeproj
 ```
