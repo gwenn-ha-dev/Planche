@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TrierImagesApp: App {
+struct PlancheApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E11111110000000000000001 /* TrierImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000001 /* TrierImagesApp.swift */; };
+		E4E0697E2FA731DB0011D46D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E4E0697D2FA731DB0011D46D /* Localizable.xcstrings */; };
+		E11111110000000000000001 /* PlancheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000001 /* PlancheApp.swift */; };
 		E11111110000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000002 /* ContentView.swift */; };
 		E11111110000000000000003 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000003 /* ImageModel.swift */; };
 		E11111110000000000000004 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000004 /* GalleryView.swift */; };
@@ -19,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E10000000000000000000001 /* TrierImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrierImagesApp.swift; sourceTree = "<group>"; };
+		E10000000000000000000001 /* PlancheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlancheApp.swift; sourceTree = "<group>"; };
 		E10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E10000000000000000000003 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		E10000000000000000000004 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -27,8 +28,8 @@
 		E10000000000000000000006 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		E10000000000000000000007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10000000000000000000008 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		E10000000000000000000010 /* TrierImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrierImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E10000000000000000000011 /* TrierImages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrierImages.entitlements; sourceTree = "<group>"; };
+		E10000000000000000000010 /* Planche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planche.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10000000000000000000011 /* Planche.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Planche.entitlements; sourceTree = "<group>"; };
 		E4E0697D2FA731DB0011D46D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E4E0697F2FA734830011D46D /* ShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,16 +48,16 @@
 		E12222220000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				E12222220000000000000002 /* TrierImages */,
+				E12222220000000000000002 /* Planche */,
 				E12222220000000000000003 /* Products */,
 				E4E0697D2FA731DB0011D46D /* Localizable.xcstrings */,
 			);
 			sourceTree = "<group>";
 		};
-		E12222220000000000000002 /* TrierImages */ = {
+		E12222220000000000000002 /* Planche */ = {
 			isa = PBXGroup;
 			children = (
-				E10000000000000000000001 /* TrierImagesApp.swift */,
+				E10000000000000000000001 /* PlancheApp.swift */,
 				E10000000000000000000002 /* ContentView.swift */,
 				E10000000000000000000003 /* ImageModel.swift */,
 				E10000000000000000000004 /* GalleryView.swift */,
@@ -64,16 +65,16 @@
 				E10000000000000000000006 /* ThumbnailView.swift */,
 				E10000000000000000000008 /* ImageLoader.swift */,
 				E10000000000000000000007 /* Assets.xcassets */,
-				E10000000000000000000011 /* TrierImages.entitlements */,
+				E10000000000000000000011 /* Planche.entitlements */,
 				E4E0697F2FA734830011D46D /* ShortcutsView.swift */,
 			);
-			path = TrierImages;
+			path = Planche;
 			sourceTree = "<group>";
 		};
 		E12222220000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E10000000000000000000010 /* TrierImages.app */,
+				E10000000000000000000010 /* Planche.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E14444440000000000000001 /* TrierImages */ = {
+		E14444440000000000000001 /* Planche */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E16666660000000000000001 /* Build configuration list for PBXNativeTarget "TrierImages" */;
+			buildConfigurationList = E16666660000000000000001 /* Build configuration list for PBXNativeTarget "Planche" */;
 			buildPhases = (
 				E15555550000000000000001 /* Sources */,
 				E13333330000000000000001 /* Frameworks */,
@@ -93,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = TrierImages;
-			productName = TrierImages;
-			productReference = E10000000000000000000010 /* TrierImages.app */;
+			name = Planche;
+			productName = Planche;
+			productReference = E10000000000000000000010 /* Planche.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E16666660000000000000003 /* Build configuration list for PBXProject "TrierImages" */;
+			buildConfigurationList = E16666660000000000000003 /* Build configuration list for PBXProject "Planche" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = fr;
 			hasScannedForEncodings = 0;
@@ -127,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E14444440000000000000001 /* TrierImages */,
+				E14444440000000000000001 /* Planche */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11111110000000000000007 /* Assets.xcassets in Resources */,
+				E4E0697E2FA731DB0011D46D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E069802FA734830011D46D /* ShortcutsView.swift in Sources */,
-				E11111110000000000000001 /* TrierImagesApp.swift in Sources */,
+				E11111110000000000000001 /* PlancheApp.swift in Sources */,
 				E11111110000000000000002 /* ContentView.swift in Sources */,
 				E11111110000000000000003 /* ImageModel.swift in Sources */,
 				E11111110000000000000004 /* GalleryView.swift in Sources */,
@@ -209,7 +211,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -259,7 +261,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -269,7 +271,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				AUTOMATION_APPLE_EVENTS = NO;
-				CODE_SIGN_ENTITLEMENTS = TrierImages/TrierImages.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Planche/Planche.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -290,7 +292,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Thierry Le Bris";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.trierimages.app;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gwennha.Planche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
 				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
@@ -308,7 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				AUTOMATION_APPLE_EVENTS = NO;
-				CODE_SIGN_ENTITLEMENTS = TrierImages/TrierImages.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Planche/Planche.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -329,7 +331,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Thierry Le Bris";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.trierimages.app;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gwennha.Planche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
 				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
@@ -345,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E16666660000000000000001 /* Build configuration list for PBXNativeTarget "TrierImages" */ = {
+		E16666660000000000000001 /* Build configuration list for PBXNativeTarget "Planche" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E18888880000000000000003 /* Debug */,
@@ -354,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E16666660000000000000003 /* Build configuration list for PBXProject "TrierImages" */ = {
+		E16666660000000000000003 /* Build configuration list for PBXProject "Planche" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E18888880000000000000001 /* Debug */,

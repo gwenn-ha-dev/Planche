@@ -97,7 +97,7 @@ struct ContentView: View {
             // Status bar
             statusBar
         }
-        .navigationTitle(store.folderURL?.lastPathComponent ?? "TrierImages")
+        .navigationTitle(store.folderURL?.lastPathComponent ?? "Planche")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button(action: { store.openFolder() }) {

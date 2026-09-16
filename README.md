@@ -1,54 +1,51 @@
-# TrierImages
+# Planche
 
-Application macOS native pour visualiser, trier et organiser vos images.
+[![CI](https://github.com/gwenn-ha-dev/Planche/actions/workflows/ci.yml/badge.svg)](https://github.com/gwenn-ha-dev/Planche/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+![Platform](https://img.shields.io/badge/Platform-macOS%2014%2B-black?logo=apple)
+![Swift 6](https://img.shields.io/badge/Swift-6-orange?logo=swift)
 
-![macOS](https://img.shields.io/badge/macOS-14.0%2B-blue)
-![Swift](https://img.shields.io/badge/Swift-5-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
+*🇬🇧 English · 🇫🇷 [Français](./README.fr.md)*
 
-## Fonctionnalités
+A native macOS app to view, sort and organise your images — a contact sheet for a folder tree.
 
-- **Parcours récursif** de dossiers d'images
-- **Galerie de miniatures** avec taille ajustable (persistée entre les sessions)
-- **Vue détaillée** plein écran avec navigation au clavier
-- **Sélection multiple** : Cmd+clic, Shift+clic, Cmd+A
-- **Suppression** vers la corbeille macOS
-- **Glisser-déposer** de dossiers directement dans la fenêtre
-- **Afficher dans le Finder** depuis le menu contextuel
+## Features
 
-### Formats supportés
+- **Recursive browsing** of image folders.
+- **Thumbnail gallery** with adjustable size, persisted between sessions.
+- **Full-screen detail view** with keyboard navigation.
+- **Multiple selection**: ⌘-click, ⇧-click, ⌘A.
+- **Delete** to the macOS trash, **drag and drop** folders straight into the window, **Reveal in Finder** from the context menu.
+- Formats: JPG, PNG, GIF, BMP, TIFF, HEIC, HEIF, WebP, AVIF, SVG.
 
-JPG, PNG, GIF, BMP, TIFF, HEIC, HEIF, WebP, AVIF, SVG
+## Install
 
-## Raccourcis clavier
-
-| Raccourci | Action |
-|-----------|--------|
-| ⌘O | Ouvrir un dossier |
-| ⌘A | Tout sélectionner |
-| Espace | Ouvrir / fermer la vue détaillée |
-| ← → | Image précédente / suivante |
-| ⌫ | Mettre à la corbeille |
-| Échap | Fermer la vue détaillée |
-
-## Installation
-
-### Depuis les releases
-
-Télécharger le `.dmg` depuis la page [Releases](../../releases) et glisser l'application dans `/Applications`.
-
-### Compilation depuis les sources
-
-```bash
-git clone https://github.com/tlebris/TrierImages.git
-cd TrierImages
-open TrierImages.xcodeproj
+```sh
+git clone https://github.com/gwenn-ha-dev/Planche.git
+cd Planche
+make build
 ```
 
-Compiler et lancer depuis Xcode avec **⌘R**.
+## How it works
 
-**Pré-requis :** macOS 14.0 (Sonoma) ou ultérieur, Xcode 15+.
+Planche never modifies your files. It reads a folder tree, shows it, and the only destructive action it offers goes through the system trash.
 
-## Licence
+## Build
 
-[MIT](LICENSE)
+| Command | What it does |
+|---|---|
+| `make build` | Release build, warnings are errors |
+| `make test` | Run the test suite |
+| `make run` | Launch the app |
+| `make icon` | Regenerate `Resources/AppIcon.icns` |
+| `make package` | Produce a distributable bundle in `build/` |
+| `make lint` | Check compliance with the project charter |
+| `make help` | List every target |
+
+## Dependencies
+
+None — Apple frameworks only.
+
+## License
+
+MIT © 2026 gwenn-ha-dev — see [LICENSE](./LICENSE).
