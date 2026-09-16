@@ -27,7 +27,11 @@ the `Makefile`. It is the same interface in every project here.
   *Dependencies* section.
 - **`README.md` and `README.fr.md` stay in sync.** Editing one means editing the other.
 - **The icon is generated**, never hand-placed: `outils/icone.swift` is the
-  source, `make icon` rebuilds `Resources/AppIcon.icns`.
+  source, `make icon` rebuilds `Resources/AppIcon.icns`, and the app ships that
+  file — it is a Copy Resources entry, named by `CFBundleIconFile` in
+  `Planche/Info.plist`. There is deliberately no `Assets.xcassets`: an
+  `AppIcon.appiconset` silently wins over the generated `.icns`, and for five
+  months this one shipped placeholder clipart that `make lint` could not see.
 - Identifiers, commit messages and both READMEs are in **English**; comments may
   be in English or French (charter §2).
 
@@ -45,7 +49,6 @@ Planche.xcodeproj/
 Planche/
 README.md
 Resources/
-clean.png
 outils/
 ```
 
