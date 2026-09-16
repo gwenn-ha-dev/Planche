@@ -13,3 +13,6 @@ DerivedData/
 # Swift Package Manager
 .build/
 Packages/
+dist/
+*.app
+xcuserdata/
