@@ -17,7 +17,18 @@
 		E11111110000000000000007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000007 /* Assets.xcassets */; };
 		E11111110000000000000008 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000008 /* ImageLoader.swift */; };
 		E4E069802FA734830011D46D /* ShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0697F2FA734830011D46D /* ShortcutsView.swift */; };
+		E4PLANTE570000000000000D /* ImageStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4PLANTE570000000000000C /* ImageStoreTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4PLANTE5700000000000007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E17777770000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14444440000000000000001;
+			remoteInfo = Planche;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E10000000000000000000001 /* PlancheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlancheApp.swift; sourceTree = "<group>"; };
@@ -32,10 +43,19 @@
 		E10000000000000000000011 /* Planche.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Planche.entitlements; sourceTree = "<group>"; };
 		E4E0697D2FA731DB0011D46D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E4E0697F2FA734830011D46D /* ShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsView.swift; sourceTree = "<group>"; };
+		E4PLANTE570000000000000C /* ImageStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStoreTests.swift; sourceTree = "<group>"; };
+		E4PLANTE5700000000000002 /* PlancheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlancheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E13333330000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4PLANTE5700000000000005 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				E12222220000000000000002 /* Planche */,
+				E4PLANTE5700000000000003 /* PlancheTests */,
 				E12222220000000000000003 /* Products */,
 				E4E0697D2FA731DB0011D46D /* Localizable.xcstrings */,
 			);
@@ -75,8 +96,17 @@
 			isa = PBXGroup;
 			children = (
 				E10000000000000000000010 /* Planche.app */,
+				E4PLANTE5700000000000002 /* PlancheTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E4PLANTE5700000000000003 /* PlancheTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4PLANTE570000000000000C /* ImageStoreTests.swift */,
+			);
+			path = PlancheTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +129,24 @@
 			productReference = E10000000000000000000010 /* Planche.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E4PLANTE5700000000000001 /* PlancheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4PLANTE570000000000000B /* Build configuration list for PBXNativeTarget "PlancheTests" */;
+			buildPhases = (
+				E4PLANTE5700000000000004 /* Sources */,
+				E4PLANTE5700000000000005 /* Frameworks */,
+				E4PLANTE5700000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4PLANTE5700000000000008 /* PBXTargetDependency */,
+			);
+			name = PlancheTests;
+			productName = PlancheTests;
+			productReference = E4PLANTE5700000000000002 /* PlancheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +159,9 @@
 				TargetAttributes = {
 					E14444440000000000000001 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					E4PLANTE5700000000000001 = {
+						TestTargetID = E14444440000000000000001;
 					};
 				};
 			};
@@ -129,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				E14444440000000000000001 /* Planche */,
+				E4PLANTE5700000000000001 /* PlancheTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +192,13 @@
 			files = (
 				E11111110000000000000007 /* Assets.xcassets in Resources */,
 				E4E0697E2FA731DB0011D46D /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4PLANTE5700000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +220,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4PLANTE5700000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4PLANTE570000000000000D /* ImageStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4PLANTE5700000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14444440000000000000001 /* Planche */;
+			targetProxy = E4PLANTE5700000000000007 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E18888880000000000000001 /* Debug */ = {
@@ -346,6 +421,38 @@
 			};
 			name = Release;
 		};
+		E4PLANTE5700000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJAB4C2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gwennha.PlancheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Planche.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Planche";
+			};
+			name = Debug;
+		};
+		E4PLANTE570000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJAB4C2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gwennha.PlancheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Planche.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Planche";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -363,6 +470,15 @@
 			buildConfigurations = (
 				E18888880000000000000001 /* Debug */,
 				E18888880000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4PLANTE570000000000000B /* Build configuration list for PBXNativeTarget "PlancheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4PLANTE5700000000000009 /* Debug */,
+				E4PLANTE570000000000000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

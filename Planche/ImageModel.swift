@@ -28,7 +28,7 @@ class ImageStore: ObservableObject {
     @Published var loadingCount = 0
     @Published var lastError: String?
 
-    private static let supportedExtensions: Set<String> = [
+    static let supportedExtensions: Set<String> = [
         "jpg", "jpeg", "png", "gif", "bmp", "tiff", "tif",
         "heic", "heif", "webp", "avif", "svg"
     ]
@@ -58,7 +58,10 @@ class ImageStore: ObservableObject {
         }
     }
 
-    private func scanImagesAsync(in folder: URL) async -> [ImageItem] {
+    /// Internal rather than private so the tests can drive the real scan: the
+    /// natural sort and the extension filter are what a user notices, and
+    /// loadFolder only exposes them through a detached Task.
+    func scanImagesAsync(in folder: URL) async -> [ImageItem] {
         let fm = FileManager.default
         guard let enumerator = fm.enumerator(
             at: folder,
