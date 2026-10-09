@@ -35,11 +35,11 @@ First release as Planche: a signed and notarized `.dmg`.
 ### Removed
 - `Planche/Assets.xcassets` and the root `clean.png` it was drawn from.
 
-## [0.1.0] — 2026-09-16
+## [1.0] — 2026-05-03
 
 ### Added
-- Initial release.
+- First release, published under the name TrierImages.
 
 [Unreleased]: https://github.com/gwenn-ha-dev/Planche/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/gwenn-ha-dev/Planche/releases/tag/v1.1.0
-[0.1.0]: https://github.com/gwenn-ha-dev/Planche/releases/tag/v0.1.0
+[1.0]: https://github.com/gwenn-ha-dev/Planche/tree/v1.0
