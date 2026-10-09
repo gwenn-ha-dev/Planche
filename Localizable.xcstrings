@@ -8,12 +8,18 @@
             "state" : "translated",
             "value" : "%lld / %lld"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld / %lld"
+          }
         }
       }
     },
     "%lld images" : {
       "localizations" : {
-        "fr" : {
+        "en" : {
           "variations" : {
             "plural" : {
               "one" : {
@@ -31,7 +37,7 @@
             }
           }
         },
-        "en" : {
+        "fr" : {
           "variations" : {
             "plural" : {
               "one" : {
@@ -53,24 +59,6 @@
     },
     "%lld images trouvées..." : {
       "localizations" : {
-        "fr" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld image trouvée..."
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld images trouvées..."
-                }
-              }
-            }
-          }
-        },
         "en" : {
           "variations" : {
             "plural" : {
@@ -88,11 +76,47 @@
               }
             }
           }
+        },
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld image trouvée..."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld images trouvées..."
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld sélectionnées" : {
       "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld selected"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld selected"
+                }
+              }
+            }
+          }
+        },
         "fr" : {
           "variations" : {
             "plural" : {
@@ -110,24 +134,6 @@
               }
             }
           }
-        },
-        "en" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld selected"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld selected"
-                }
-              }
-            }
-          }
         }
       }
     },
@@ -137,6 +143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show in Finder"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher dans le Finder"
           }
         }
       }
@@ -148,6 +160,12 @@
             "state" : "translated",
             "value" : "Cancel"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
+          }
         }
       }
     },
@@ -157,6 +175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loading images..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement des images..."
           }
         }
       }
@@ -168,6 +192,12 @@
             "state" : "translated",
             "value" : "Choose a folder containing images"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un dossier contenant des images"
+          }
         }
       }
     },
@@ -177,6 +207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copy Image"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier l'image"
           }
         }
       }
@@ -188,6 +224,12 @@
             "state" : "translated",
             "value" : "Copy Path"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier le chemin"
+          }
         }
       }
     },
@@ -197,6 +239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur"
           }
         }
       }
@@ -208,6 +256,12 @@
             "state" : "translated",
             "value" : "Space"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espace"
+          }
         }
       }
     },
@@ -217,6 +271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Close"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer"
           }
         }
       }
@@ -228,6 +288,12 @@
             "state" : "translated",
             "value" : "File > Open Folder  or  ⌘O"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichier > Ouvrir un dossier  ou  ⌘O"
+          }
         }
       }
     },
@@ -237,6 +303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "General"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Général"
           }
         }
       }
@@ -248,6 +320,12 @@
             "state" : "translated",
             "value" : "Previous / Next image"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image précédente / suivante"
+          }
         }
       }
     },
@@ -257,6 +335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Could not move to Trash: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de mettre à la corbeille : %@"
           }
         }
       }
@@ -268,6 +352,12 @@
             "state" : "translated",
             "value" : "The images will be moved to the Trash."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les images seront déplacées dans la corbeille du Mac."
+          }
         }
       }
     },
@@ -277,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Move to Trash"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mettre à la corbeille"
           }
         }
       }
@@ -288,15 +384,11 @@
             "state" : "translated",
             "value" : "OK"
           }
-        }
-      }
-    },
-    "ou glisser un dossier ici" : {
-      "localizations" : {
-        "en" : {
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "or drag a folder here"
+            "value" : "OK"
           }
         }
       }
@@ -308,6 +400,12 @@
             "state" : "translated",
             "value" : "Open"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir"
+          }
         }
       }
     },
@@ -317,6 +415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open / Close"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir / fermer"
           }
         }
       }
@@ -328,6 +432,12 @@
             "state" : "translated",
             "value" : "Open Folder"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un dossier"
+          }
         }
       }
     },
@@ -337,6 +447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open folder (⌘O)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un dossier (⌘O)"
           }
         }
       }
@@ -348,6 +464,12 @@
             "state" : "translated",
             "value" : "Open a folder to get started"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un dossier pour commencer"
+          }
         }
       }
     },
@@ -357,6 +479,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Folder..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un dossier..."
           }
         }
       }
@@ -368,6 +496,12 @@
             "state" : "translated",
             "value" : "Keyboard Shortcuts"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raccourcis clavier"
+          }
         }
       }
     },
@@ -378,29 +512,17 @@
             "state" : "translated",
             "value" : "Delete"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
         }
       }
     },
     "Supprimer %lld images ?" : {
       "localizations" : {
-        "fr" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Supprimer %lld image ?"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Supprimer %lld images ?"
-                }
-              }
-            }
-          }
-        },
         "en" : {
           "variations" : {
             "plural" : {
@@ -418,6 +540,24 @@
               }
             }
           }
+        },
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Supprimer %lld image ?"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Supprimer %lld images ?"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -427,6 +567,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete selection"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la sélection"
           }
         }
       }
@@ -438,6 +584,12 @@
             "state" : "translated",
             "value" : "Delete selection (⌫)"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la sélection (⌫)"
+          }
         }
       }
     },
@@ -447,6 +599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select All"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout sélectionner"
           }
         }
       }
@@ -458,6 +616,12 @@
             "state" : "translated",
             "value" : "View Full Size"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir en grand"
+          }
         }
       }
     },
@@ -468,6 +632,28 @@
             "state" : "translated",
             "value" : "Detail View"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vue détaillée"
+          }
+        }
+      }
+    },
+    "ou glisser un dossier ici" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "or drag a folder here"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ou glisser un dossier ici"
+          }
         }
       }
     },
@@ -477,6 +663,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esc"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échap"
           }
         }
       }

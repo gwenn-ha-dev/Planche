@@ -40,7 +40,7 @@ struct ShortcutsView: View {
                 .padding()
             }
         }
-        .frame(width: 340, height: 280)
+        .frame(width: 340, height: 320)
     }
 
     private func section(_ title: LocalizedStringKey, shortcuts: [(key: LocalizedStringKey, action: LocalizedStringKey)]) -> some View {

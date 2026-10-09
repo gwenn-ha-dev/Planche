@@ -126,6 +126,7 @@ struct DetailView: View {
             }
         }
         .focusable()
+        .focusEffectDisabled()
         .focused($isFocused)
         .onAppear {
             syncIndex()

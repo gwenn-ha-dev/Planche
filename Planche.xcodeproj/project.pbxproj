@@ -167,7 +167,7 @@
 			};
 			buildConfigurationList = E16666660000000000000003 /* Build configuration list for PBXProject "Planche" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = fr;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				fr,

@@ -22,6 +22,7 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.2), value: detailImage != nil)
         .frame(minWidth: 600, minHeight: 400)
         .focusable()
+        .focusEffectDisabled()
         .focused($isFocused)
         .onChange(of: detailImage) {
             if detailImage == nil {
