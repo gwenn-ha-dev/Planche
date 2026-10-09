@@ -86,6 +86,42 @@ struct ContentView: View {
         .sheet(isPresented: $showShortcuts) {
             ShortcutsView()
         }
+        .task { applyLaunchArguments() }
+        .onChange(of: store.images) { applyLaunchSelection() }
+    }
+
+    // MARK: - Launch arguments
+    //
+    // The README captures (outils/captures.sh) cannot click: they set the view
+    // at launch. Only the argument domain is read — `-folder ~/x` on the command
+    // line — so nothing here is ever persisted or read back from a past session.
+    //   -folder <path>      open this folder
+    //   -select <a,b,…>     then select these files
+    //   -show <file>        then open this file in the detail view
+    //   -shortcuts YES      show the keyboard shortcuts
+
+    private var launchArguments: [String: Any] {
+        UserDefaults.standard.volatileDomain(forName: UserDefaults.argumentDomain)
+    }
+
+    private func applyLaunchArguments() {
+        if let path = launchArguments["folder"] as? String {
+            store.loadFolder(URL(fileURLWithPath: (path as NSString).expandingTildeInPath, isDirectory: true))
+        }
+        if (launchArguments["shortcuts"] as? String).map({ ["YES", "1", "true"].contains($0) }) == true {
+            showShortcuts = true
+        }
+    }
+
+    private func applyLaunchSelection() {
+        guard launchArguments["folder"] != nil, !store.images.isEmpty, selection.isEmpty, detailImage == nil else { return }
+        if let names = launchArguments["select"] as? String {
+            let wanted = Set(names.split(separator: ",").map(String.init))
+            selection = Set(store.images.filter { wanted.contains($0.filename) })
+        }
+        if let name = launchArguments["show"] as? String {
+            detailImage = store.images.first { $0.filename == name }
+        }
     }
 
     private var mainContent: some View {
