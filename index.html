@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planche — a contact sheet for your folders of images, on your Mac</title>
+<meta name="description" content="Free, open-source macOS app to browse a folder tree of images as a contact sheet: thumbnails, a detail view, multiple selection and the Trash. Native SwiftUI, sandboxed, no dependencies.">
+<link rel="canonical" href="https://gwenn-ha-dev.github.io/Planche/">
+<link rel="icon" href="images/icon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Planche — a contact sheet for your folders of images, on your Mac">
+<meta property="og:description" content="Free, open-source macOS app to browse a folder tree of images as a contact sheet: thumbnails, a detail view, multiple selection and the Trash. Native SwiftUI, sandboxed, no dependencies.">
+<meta property="og:url" content="https://gwenn-ha-dev.github.io/Planche/">
+<meta property="og:image" content="https://gwenn-ha-dev.github.io/Planche/images/social-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gwenn-ha-dev.github.io/Planche/images/social-preview.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Planche",
+ "operatingSystem":"macOS 14 or later","applicationCategory":"MultimediaApplication",
+ "description":"Free, open-source macOS app to browse a folder tree of images as a contact sheet: thumbnails, a detail view, multiple selection and the Trash. Native SwiftUI, sandboxed, no dependencies.",
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT",
+ "downloadUrl":"https://github.com/gwenn-ha-dev/Planche/releases/latest",
+ "codeRepository":"https://github.com/gwenn-ha-dev/Planche","image":"https://gwenn-ha-dev.github.io/Planche/images/gallery.png"}
+</script>
+<style>
+  :root {
+    --bg: #ffffff; --panel: #f4f5f7; --line: #e2e4e8; --text: #16181d; --muted: #5d6170;
+    --accent: #9a5b1c; --accent-text: #fff; --link: #1f5fbf;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111214; --panel: #1b1c1f; --line: #2c2d31; --text: #ececee; --muted: #a2a3a8; --link: #8ab4ff; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; }
+  a { color: var(--link); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 72px 0 40px; text-align: center; }
+  .icon { width: 96px; height: 96px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); margin: 12px 0 4px; letter-spacing: -0.02em; }
+  .lead { font-size: clamp(19px, 2.6vw, 23px); max-width: 760px; margin: 0 auto 28px; }
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 10px; text-decoration: none;
+         font-weight: 600; border: 1px solid var(--line); color: var(--text); background: var(--panel); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .req { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  figure { margin: 0; }
+  .shot img, .hero img { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 12px; }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; text-align: center; }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 20px; letter-spacing: -0.01em; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+  .split.rev .text { order: 2; }
+  @media (max-width: 760px) { .split { grid-template-columns: 1fr; } .split.rev .text { order: 0; } }
+  code { font: 14.5px ui-monospace, "SF Mono", Menlo, monospace; background: var(--panel);
+         padding: 2px 6px; border-radius: 6px; border: 1px solid var(--line); }
+  footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; text-align: center;
+           border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <img class="icon" src="images/icon.png" width="96" height="96" alt="">
+  <h1>Planche</h1>
+  <p class="lead">Open a folder and see every image in it and in its subfolders, as a contact sheet. Pick, compare, look closer, and send what you do not keep to the Trash.</p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/gwenn-ha-dev/Planche/releases/latest">Download for macOS</a>
+    <a class="btn" href="https://github.com/gwenn-ha-dev/Planche">Source on GitHub</a>
+  </div>
+  <p class="req">Free and open source (MIT) · macOS 14 or later · signed and notarized · English and French</p>
+</header>
+
+<div class="wrap hero">
+  <figure>
+    <img src="images/gallery.png" alt="Planche showing a folder of 24 pictures of shores, ridges and dunes as a grid of thumbnails, each with its file name">
+    <figcaption>A folder tree, flattened into one grid, in natural order.</figcaption>
+  </figure>
+</div>
+
+<section class="wrap" style="margin-top:48px">
+  <h2>Why Planche</h2>
+  <div class="grid3">
+    <div class="card"><h3>The whole tree</h3><p>Every image in the folder and its subfolders, in one grid, sorted the way you read: shore-2 before shore-10.</p></div>
+    <div class="card"><h3>Ten formats</h3><p>JPG, PNG, GIF, BMP, TIFF, HEIC, HEIF, WebP, AVIF and SVG.</p></div>
+    <div class="card"><h3>Your size</h3><p>Thumbnails from 80 to 400 points, with a slider; Planche remembers the size you chose.</p></div>
+    <div class="card"><h3>Keyboard first</h3><p>Space to look closer, ← → to move on, ⌘A to select all, ⌫ to trash. ⌘/ lists them all.</p></div>
+    <div class="card"><h3>Nothing rewritten</h3><p>Planche never edits a file. The only destructive action goes through the macOS Trash.</p></div>
+    <div class="card"><h3>Sandboxed</h3><p>It reads only the folders you open or drop on it. No account, no network, no dependencies.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split">
+    <div class="text">
+      <h2>Pick, then act</h2>
+      <p>⌘-click and ⇧-click to select, drag the slider for larger thumbnails. The toolbar sends the selection
+        to the Trash; the context menu also shows it in Finder or copies its paths.</p>
+    </div>
+    <figure class="shot"><img src="images/selection.png" alt="Three pictures selected among larger thumbnails, outlined in blue, with “3 selected” in the status bar" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="split rev">
+    <div class="text">
+      <h2>Look closer</h2>
+      <p>Double-click or press Space: the picture fills the window, with its path in the folder and its position.
+        The arrows move through the whole set; Esc goes back to the grid where you left it.</p>
+    </div>
+    <figure class="shot"><img src="images/detail.png" alt="The detail view: one seascape fills the window, with its file name and its position, 15 of 24" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="wrap" style="text-align:center">
+  <h2>Get it</h2>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/gwenn-ha-dev/Planche/releases/latest">Download the .dmg</a>
+    <a class="btn" href="https://github.com/gwenn-ha-dev/Planche#readme">Read the README</a>
+    <a class="btn" href="https://github.com/gwenn-ha-dev/Planche/blob/main/README.fr.md">En français</a>
+  </div>
+  <p class="req">Open the .dmg, drag Planche onto Applications. It is signed with a Developer ID and notarized by Apple: it opens with a double click.</p>
+</section>
+
+<footer class="wrap">
+  Planche · MIT · <a href="https://github.com/gwenn-ha-dev/Planche">github.com/gwenn-ha-dev/Planche</a>
+</footer>
+</body>
+</html>
